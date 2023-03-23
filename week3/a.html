@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fixed Bar</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 500px;
+            display: flex;
+            background-color: yellow;
+            flex-direction: column;
+        }
+
+
+        .blue-box {
+            height: 500px;
+            margin: 5px;
+            background-color: blue;
+        }
+
+        .green-box {
+            flex-grow: 1;
+            background-color: green;
+            margin-left: 20px;
+        }
+
+        .red-box {
+            flex-direction: column;
+            display: flex;
+            margin-left: 20px;
+            background-color: red;
+            width: 500px;
+            position: relative;
+        }
+        .div2 {
+            margin: 5px;
+            height: 500px;
+        }
+        .sky-blue-box {
+            background-color: skyblue;
+            margin: 5px;
+            height: 500px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <div class="blue-box"></div>
+        <div class="blue-box"></div>
+    </div>
+    <div class="green-box"></div>
+    <div class="red-box">
+        <div class="div2"></div>
+        <div class="sky-blue-box"></div>
+    </div>
+</div>
+</body>
+</html>
