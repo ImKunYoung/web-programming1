@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fixed Bar</title>
+  <style>
+    .container {
+      margin-top: 0px;
+      margin-left: 0px;
+    }
+
+    .top_bar {
+      background: red;
+
+      position: fixed;
+      left: 0; bottom: 0; right: 0;
+      height: 50px;
+    }
+
+    .left_bar {
+      background: blue;
+
+      position: fixed;
+      right: 0; top: 0; bottom: 0;
+      width: 50px;
+    }
+  </style>
+</head>
+<body>
+<div class="top_bar"></div>
+<div class="left_bar"></div>
+<div class="container">
+  <h1>요소를 고정 위치에 배치하기</h1>
+  <p>요소를 고정 위치에 배치하려면 position 속성에 fixed를 적용한다.</p>
+  <p>left, top, bottom, right 속성에 값을 입력한다.</p>
+  <p>width, height 속성으로 크기를 설정한다.</p>
+</div>
+</body>
+</html>
