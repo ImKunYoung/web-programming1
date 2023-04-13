@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Lodash 라이브러리 사용</title>
+</head>
+<body>
+
+
+<!--cdn jsdelivr-->
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+<script>
+    /*데이터를 생성합니다*/
+    const books = [{
+        name: '혼자 공부하는 파이썬',
+        price: 18000,
+        publisher: '한빛미디어'
+    },{
+        name: '혼자 공부하는 자바',
+        price: 27000,
+        publisher: '한빛아카데미'
+    },{
+        name: '혼자 공부하는 C언어',
+        price: 15000,
+        publisher: '한빛미디어'
+    },{
+        name: '혼자 공부하는 리눅스',
+        price: 25000,
+        publisher: '한빛아카데미'
+    },{
+        name: '혼자 공부하는 알고리즘',
+        price: 19000,
+        publisher: '한빛미디어'
+    }]
+    /*가격으로 정렬한 뒤 출력합니다.*/
+    const output = _.sortBy(books, (book) => book.price);
+    console.log(JSON.stringify(output, null, 2));
+
+</script>
+
+
+
+</body>
+</html>
