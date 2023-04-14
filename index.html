@@ -114,9 +114,12 @@
             const projectsList = document.getElementById('projects-list');
 
             // 각 스킬을 순회하며 스킬 목록에 추가
-            skills.forEach(skill => {
+            skills.forEach((skill, index) => {
                 const li = document.createElement('li');
                 li.textContent = skill;
+                li.setAttribute('data-aos', 'fade-up');
+                li.setAttribute('data-aos-duration', '1000');
+                li.setAttribute('data-aos-delay', `${index * 200}`);
                 skillsList.appendChild(li);
             });
 
@@ -164,13 +167,13 @@
             <!-- 프로필 사진 -->
             <img src="KakaoTalk_20220925_211824933_01.jpg" id="profile-pic" data-aos="flip-up" data-aos-duration="1500">
             <!-- 소개글 -->
-            <p id="intro">융합소프트웨어학부 60201701 임건영입니다.</p>
+            <p id="intro" data-aos="fade-right" data-aos-duration="1500">융합소프트웨어학부 60201701 임건영입니다.</p>
         </div>
     </section>
     <!-- 기술 섹션 -->
     <section id="skills">
         <!-- 섹션 제목 -->
-        <h2>기술</h2>
+        <h2 data-aos="zoom-in" data-aos-duration="1000">프로젝트</h2>
         <!-- 기술 목록 -->
         <ul id="skills-list">
         </ul>
@@ -185,7 +188,7 @@
     <!-- 연락처 섹션 -->
     <section id="contact">
         <!-- 섹션 제목 -->
-        <h2>연락처</h2>
+        <h2 data-aos="zoom-in" data-aos-duration="1000">연락처</h2>
         <!-- 이메일 주소 -->
         <p>Email: <a href="mailto:ur2kunyoung2@outlook.com" id="email">ur2kunyoung2@outlook.com</a></p>
     </section>
