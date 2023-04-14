@@ -261,7 +261,7 @@
     <!-- 기술 섹션 -->
     <section id="skills">
         <!-- 섹션 제목 -->
-        <h2 data-aos="zoom-in" data-aos-duration="1000">프로젝트</h2>
+        <h2 data-aos="zoom-in" data-aos-duration="1000">기술 목록</h2>
         <!-- 기술 목록 -->
         <ul id="skills-list">
         </ul>
@@ -409,6 +409,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        // 헤더 텍스트 색상 변경 애니메이션
         anime({
             targets: "header h1",
             color: ["#ffffff", "#f06595", "#ff9d76", "#ffffff"],
@@ -416,6 +417,16 @@
             duration: 3000,
             loop: true,
             delay: 1000,
+        });
+
+        // 섹션 제목 팝업 애니메이션
+        anime({
+            targets: "section h2",
+            translateY: [-20, 0],
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1500,
+            delay: (el, i) => i * 1000,
         });
     });
 </script>
