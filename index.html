@@ -299,7 +299,7 @@
         {
             "particles": {
                 "number": {
-                    "value": 80,
+                    "value": 300,
                     "density": {
                         "enable": true,
                         "value_area": 800
@@ -329,7 +329,7 @@
                     }
                 },
                 "size": {
-                    "value": 3,
+                    "value": 0.001,
                     "random": true,
                     "anim": {
                         "enable": false,
@@ -375,20 +375,20 @@
                 },
                 "modes": {
                     "grab": {
-                        "distance": 400,
+                        "distance": 100,
                         "line_linked": {
                             "opacity": 1
                         }
                     },
                     "bubble": {
-                        "distance": 400,
+                        "distance": 100,
                         "size": 40,
                         "duration": 2,
                         "opacity": 8,
                         "speed": 3
                     },
                     "repulse": {
-                        "distance": 200,
+                        "distance": 100,
                         "duration": 0.4
                     },
                     "push": {
@@ -407,7 +407,6 @@
         console.log('callback - particles.js config loaded');
     });
 </script>
-
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         // 헤더 텍스트 색상 변경 애니메이션
@@ -428,6 +427,16 @@
             easing: "easeOutExpo",
             duration: 1500,
             delay: (el, i) => i * 1000,
+        });
+
+        // 섹션 텍스트 좌에서 우로 애니메이션
+        anime({
+            targets: "section p, section ul, section img",
+            translateX: [-50, 0],
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 2000,
+            delay: (el, i) => i * 200 + 1000,
         });
     });
 </script>
