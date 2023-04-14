@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 기본 문자셋 설정 -->
+    <meta charset="UTF-8">
+    <!-- 반응형 웹 디자인 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 웹 페이지 제목 -->
+    <title>자기소개 페이지</title>
+    <!-- 외부 CSS 라이브러리 (Animate.css) 연결 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS 라이브러리 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- AOS 라이브러리 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Sticky.js 라이브러리 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-js/1.2.0/sticky.min.js"></script>
+    <style>
+        /* 기본 바디 스타일 설정 */
+        body {
+            font-family: Arial, sans-serif; /* 폰트 설정 */
+            line-height: 1.6; /* 줄 간격 설정 */
+            margin: 0; /* 바디의 외부 여백 제거 */
+            padding: 0; /* 바디의 내부 여백 제거 */
+        }
+
+        /* 헤더 스타일 설정 */
+        header {
+            background-color: #f44336; /* 배경색 설정 */
+            color: #fff; /* 글자색 설정 */
+            padding: 1rem; /* 내부 여백 설정 */
+            text-align: center; /* 텍스트 가운데 정렬 */
+        }
+
+        /* 내비게이션 바 스타일 설정 */
+        nav {
+            background-color: #333; /* 배경색 설정 */
+            display: flex; /* flexbox 레이아웃 사용 */
+            justify-content: center; /* 항목들 가운데 정렬 */
+            padding: 0.5rem; /* 내부 여백 설정 */
+        }
+
+        /* 내비게이션 바의 목록 스타일 설정 */
+        nav ul {
+            display: flex; /* flexbox 레이아웃 사용 */
+            list-style: none; /* 목록 스타일 제거 */
+            padding: 0; /* 내부 여백 제거 */
+        }
+
+        /* 내비게이션 바의 목록 항목 스타일 설정 */
+        nav ul li {
+            margin: 0 1rem; /* 양쪽 외부 여백 설정 */
+        }
+
+        /* 내비게이션 바의 링크 스타일 설정 */
+        nav ul li a {
+            color: #fff; /* 글자색 설정 */
+            text-decoration: none; /* 밑줄 제거 */
+        }
+
+        /* 메인 영역 스타일 설정 */
+        main {
+            padding: 2rem; /* 내부 여백 설정 */
+        }
+
+        /* 섹션 스타일 설정 */
+        section {
+            margin-bottom: 2rem; /* 아래쪽 외부 여백 설정 */
+        }
+
+        /* 제목 스타일 설정 */
+        h1, h2 {
+            margin-bottom: 1rem; /* 아래쪽 외부 여백 설정 */
+        }
+
+        /* '소개' 섹션의 이미지 스타일 설정 */
+        #about img {
+            max-width: 150px; /* 최대 너비 설정 */
+            border-radius: 50%; /* 이미지 모서리 둥글게 설정 */
+        }
+
+        /* 스킬 및 프로젝트 목록 스타일 설정 */
+        #skills-list, #projects-list {
+            list-style: none; /* 목록 스타일 제거 */
+            padding: 0; /* 내부 여백 제거 */
+        }
+
+        /* 스킬 및 프로젝트 목록 항목 스타일 설정 */
+        #skills-list li, #projects-list li {
+            margin-bottom: 0.5rem; /* 아래쪽 외부 여백 설정 */
+        }
+
+        /* 푸터 스타일 설정 */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+    <script>
+        // DOMContentLoaded 이벤트 리스너 설정
+        document.addEventListener('DOMContentLoaded', function () {
+            // 스킬 목록 배열
+            const skills = ['자바', 'html', 'css'];
+            // 프로젝트 목록 배열
+            const projects = [
+                {name: 'fake-news', url: 'https://github.com/ImKunYoung/fake-news'},
+                {name: 'react-native-simple-chat4', url: 'https://github.com/ImKunYoung/react-native-simple-chat4'}
+            ];
+
+            // HTML 요소를 가져옴
+            const skillsList = document.getElementById('skills-list');
+            const projectsList = document.getElementById('projects-list');
+
+            // 각 스킬을 순회하며 스킬 목록에 추가
+            skills.forEach(skill => {
+                const li = document.createElement('li');
+                li.textContent = skill;
+                skillsList.appendChild(li);
+            });
+
+            // 각 프로젝트를 순회하며 프로젝트 목록에 추가
+            projects.forEach(project => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = project.url;
+                a.textContent = project.name;
+                li.appendChild(a);
+                projectsList.appendChild(li);
+            });
+        });
+    </script>
+
+</head>
+<body>
+<script>
+    AOS.init();
+</script>
+
+
+<!-- 헤더 영역 -->
+<header>
+    <!-- 웹 페이지 제목 -->
+    <h1>홍길동</h1>
+</header>
+<!-- 내비게이션 영역 -->
+<nav id="sticky-nav">
+    <!-- 메뉴 목록 -->
+    <ul>
+        <!-- 메뉴 항목과 앵커 태그 -->
+        <li><a href="#about">자기소개</a></li>
+        <li><a href="#skills">기술</a></li>
+        <li><a href="#projects">프로젝트</a></li>
+        <li><a href="#contact">연락처</a></li>
+    </ul>
+</nav>
+<!-- 메인 컨텐츠 영역 -->
+<main>
+    <section id="about" data-aos="fade-in">
+        <!-- 자기소개 섹션 -->
+        <h2>자기소개</h2>
+        <div>
+            <!-- 프로필 사진 -->
+            <img src="KakaoTalk_20220925_211824933_01.jpg" id="profile-pic">
+            <!-- 소개글 -->
+            <p id="intro">융합소프트웨어학부 60201701 임건영입니다.</p>
+        </div>
+    </section>
+    <!-- 기술 섹션 -->
+    <section id="skills">
+        <!-- 섹션 제목 -->
+        <h2>기술</h2>
+        <!-- 기술 목록 -->
+        <ul id="skills-list">
+        </ul>
+    </section>
+    <section id="projects">
+        <!-- 프로젝트 섹션 -->
+        <h2>프로젝트</h2>
+        <!-- 프로젝트 목록 -->
+        <ul id="projects-list">
+        </ul>
+    </section>
+    <!-- 연락처 섹션 -->
+    <section id="contact">
+        <!-- 섹션 제목 -->
+        <h2>연락처</h2>
+        <!-- 이메일 주소 -->
+        <p>Email: <a href="mailto:ur2kunyoung2@outlook.com" id="email">ur2kunyoung2@outlook.com</a></p>
+    </section>
+</main>
+<!-- 푸터 영역 -->
+<footer>
+    <!-- 저작권 정보 -->
+    <p>© 2023 임건영. All rights reserved.</p>
+</footer>
+<script>
+    const stickyNav = new Sticky('#sticky-nav');
+</script>
+</body>
+</html>
