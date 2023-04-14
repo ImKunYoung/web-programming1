@@ -28,6 +28,9 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- Bootstrap JS 라이브러리 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Animate.js 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <style>
 
         #particles-js {
@@ -401,6 +404,19 @@
     // 배경 애니메이션 실행
     particlesJS.load('particles-js', 'particles.json', function() {
         console.log('callback - particles.js config loaded');
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        anime({
+            targets: "header h1",
+            color: ["#ffffff", "#f06595", "#ff9d76", "#ffffff"],
+            easing: "easeInOutQuad",
+            duration: 3000,
+            loop: true,
+            delay: 1000,
+        });
     });
 </script>
 </body>
